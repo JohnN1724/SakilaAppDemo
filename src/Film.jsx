@@ -8,7 +8,7 @@ function Film()
 
     const [films, setFilms] = useState();
 
-    const getFilmsNicer = async () => {
+    const getFilmsAsync = async () => {
         const response = await fetch(
             `https://sakilaapp-1663062580900.azurewebsites.net/Home/allFilms`
         ).then((response ) => response.json());
@@ -16,7 +16,7 @@ function Film()
     };
 
     useEffect(() => {
-        getFilmsNicer();
+        getFilmsAsync();
     }, []);
     
     return (
@@ -34,7 +34,7 @@ function Film()
                 films.map((film) => 
                 (          
                 <tr>    
-                    <td>{film.filmID}</td>
+                    <td>{film.film_id}</td>
                     <td>{film.title}</td>
                     <td>{film.description}</td>
                     <td>{film.release_year}</td>
