@@ -37,8 +37,8 @@ function Film()
                     <td>{film.filmID}</td>
                     <td>{film.title}</td>
                     <td>{film.description}</td>
-                    <td>{film.year}</td>
-                    <td>{film.rentRate}</td>
+                    <td>{film.release_year}</td>
+                    <td>{film.rental_rate}</td>
                     <td>{film.length}</td>
                     <td>{film.rating}</td>
                 </tr>

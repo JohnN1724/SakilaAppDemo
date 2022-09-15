@@ -1,5 +1,4 @@
 import React from 'react';
-import Capture from './Capture.jpg';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
@@ -18,7 +17,7 @@ function Actor() {
 
     const [actor, setActor] = useState();
 
-    const getRandAct = async () => {
+    const getRandActor = async () => {
 
         let id = Math.floor(Math.random() * (200 - 1 + 1) + 1)
 
@@ -32,7 +31,7 @@ function Actor() {
 
     useEffect(() => {
         getActors();
-        getRandAct();
+        getRandActor();
     }, []);
 
 
@@ -43,12 +42,11 @@ function Actor() {
             <div>
                 {actor &&
                     <div>
-                        <h4>{actor.firstName}</h4>
-                        <h4>{actor.lastName}</h4>
+                        <h4>{actor.first_name}</h4>
+                        <h4>{actor.last_name}</h4>
                     </div>
                 }
             </div>
-            <img src={Capture} alt = "me"/>
             <h3>A complete list of all the actors featured in the media we have. </h3>
             <div>
                 <table>
@@ -60,9 +58,9 @@ function Actor() {
                     actors.map((actor) =>
                       (
                         <tr>
-                            <td><a href="https://www.imdb.com/?ref_=nv_home">{actor.actorId}</a></td>
-                            <td>{actor.firstName}</td>
-                            <td>{actor.lastName}</td>
+                            <td><a href="https://www.amazon.co.uk/Amazon-Video/b?ie=UTF8&node=3010085031">{actor.actorId}</a></td>
+                            <td>{actor.first_name}</td>
+                            <td>{actor.last_name}</td>
                             <td><select>
                                     <option value="jeff">Jeff</option>
                                     <option value="Memes">Memes</option>

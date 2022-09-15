@@ -12,7 +12,7 @@ function Home() {
         let id = Math.floor(Math.random() * (1000 - 1 + 1) + 1)
 
         const response = await fetch(
-            `https://sakilaapp-1663062580900.azurewebsites.net/Home/Flm${id}`
+            `https://sakilaapp-1663062580900.azurewebsites.net/Home/Film/${id}`
         ).then((response) => response.json());
             setFilms(response);
             
@@ -70,8 +70,8 @@ function Home() {
                         <p>{films.title}</p>
                         <p>{films.description}</p>
                         <h4>Released in...</h4>
-                        <p>{films.year}</p>
-                        <h4>It will cost just £{films.rentRate} per week</h4>
+                        <p>{films.release_year}</p>
+                        <h4>It will cost just £{films.rental_rate} per week</h4>
                         <h4>This epic film is going to blow your mind for {films.length} minutes</h4>
                         {checkRating()}
                     </div>  
