@@ -1,0 +1,20 @@
+table {
+    justify-content: center;
+    padding-left: 100px;
+    border-style: solid 1px;
+}
+
+th{
+    color: white;
+    justify-content: center;
+}
+
+td{
+    color: white;
+    justify-content: center;
+}
+
+div{
+
+    justify-content: center;
+}

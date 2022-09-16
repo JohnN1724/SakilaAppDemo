@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import './css/Actor.css';
 
 
 function Actor() {
@@ -17,7 +18,7 @@ function Actor() {
 
     const [actor, setActor] = useState();
 
-    const getRandActor = async () => {
+    const getRandomActor = async () => {
 
         let id = Math.floor(Math.random() * (200 - 1 + 1) + 1)
 
@@ -31,19 +32,18 @@ function Actor() {
 
     useEffect(() => {
         getActors();
-        getRandActor();
+        getRandomActor();
     }, []);
 
 
     return (
         <div>
-            <h1>Have a favourite cast member?</h1>
-            <h3>Or perhaps you're looking for a recommendation?</h3>
+            <h1>List Of Our Amazing Actors</h1>
+            <h3>Highlighted Actor of The Day</h3>
             <div>
                 {actor &&
                     <div>
-                        <h4>{actor.first_name}</h4>
-                        <h4>{actor.last_name}</h4>
+                        <h4>{actor.first_name} {actor.last_name}</h4>
                     </div>
                 }
             </div>
@@ -52,8 +52,7 @@ function Actor() {
                 <table>
                 <th>ID</th>
                 <th>Forename</th>
-                <th>Surname</th>
-                <th>See their work</th>    
+                <th>Surname</th>  
                   {actors &&
                     actors.map((actor) =>
                       (
@@ -61,11 +60,6 @@ function Actor() {
                             <td><a href="https://www.amazon.co.uk/Amazon-Video/b?ie=UTF8&node=3010085031">{actor.actorId}</a></td>
                             <td>{actor.first_name}</td>
                             <td>{actor.last_name}</td>
-                            <td><select>
-                                    <option value="jeff">Jeff</option>
-                                    <option value="Memes">Memes</option>
-                                </select>
-                            </td>
                         </tr>
                       ))
                   }

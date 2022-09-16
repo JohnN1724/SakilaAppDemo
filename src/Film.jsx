@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import "./css/Film.css"
 
 
 function Film() 
@@ -21,7 +22,7 @@ function Film()
     
     return (
         <div>
-            <h1>Here's all the films at Film McFilmface</h1>
+            <h1>Here's all the films at Scamazon</h1>
             <table>
                 <th>ID</th>
                 <th>Title</th>

@@ -8,12 +8,17 @@ ul {
   }
   
   li {
-    float: left;
+    float: right;
+  }
+
+  h1 {
+    text-align: center;
+    text-size-adjust: 200%;
   }
   
   li a {
     display: block;
-    color: white;
+    color: rgb(254, 156, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

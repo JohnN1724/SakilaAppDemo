@@ -5,8 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  
+  background-color: #444;
 }
 
 code {
@@ -15,24 +14,30 @@ code {
 }
 
 h1{
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-  text-align: center;
+  color: white;
 }
+
 h2{
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-  text-align:center;
+  text-align: center;
+  color: white;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+h3{
+  text-align: center;
+  color: white;
 }
 
-th, td {
-  text-align: left;
-  padding: 15px;
+h4{
+  text-align: center;
+  color: white;
 }
 
-tr:nth-child(odd) {background-color: #f2f2f2;}
+p{
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
